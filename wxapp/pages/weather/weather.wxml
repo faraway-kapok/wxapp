@@ -1,0 +1,16 @@
+<!--pages/weather.wxml-->
+<view class="container">
+  <input placeholder="请输入城市" auto-focus bindinput="bindKeyInput" />
+    <button type="default" bindtap="query">查询</button>
+  <scroll-view
+    scroll-y
+    style="height: 400px;"
+  >
+    <view>
+      <text wx:if="{{current}}">今天 {{current.info}} 温度 {{current.temperature}}</text>
+    </view>
+    <view wx:for="{{future}}" wx:key="key">
+      <text>{{item.date}} {{item.temperature}} {{item.weather}} {{item.direct}}</text>
+    </view>
+  </scroll-view>
+</view>

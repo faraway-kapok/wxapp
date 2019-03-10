@@ -1,0 +1,11 @@
+<!--pages/qrcode/qrcode.wxml-->
+<view class="container">
+  <input placeholder="请输入文本" auto-focus bindinput="bindKeyInput" />
+  <button type="default" bindtap="query">生成</button>
+  <image
+    wx:if="{{src}}"
+      style="width: 200px; height: 200px; background-color: #eeeeee;"
+      mode="aspectFit"
+      src="{{src}}"
+    ></image>
+</view>
